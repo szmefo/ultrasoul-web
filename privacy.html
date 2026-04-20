@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polityka Prywatności — UltraSoulAI</title>
+  <meta name="description" content="Polityka prywatności UltraSoulAI — jak przetwarzamy dane osobowe zgodnie z RODO. Wersja 1.0, obowiązuje od 21.04.2026.">
+  <meta name="theme-color" content="#0A0A0A">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ultrasoul.pl/privacy">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ultrasoul.pl/privacy">
+  <meta property="og:title" content="Polityka Prywatności — UltraSoulAI">
+  <meta property="og:description" content="Jak przetwarzamy dane osobowe zgodnie z RODO.">
+  <meta property="og:locale" content="pl_PL">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0A0A0A;
+      background-image: linear-gradient(180deg, #0A0A0A 0%, #1A1510 45%, #2C2418 70%, #3D3020 100%);
+      background-attachment: fixed;
+      color: rgba(245,240,235,0.88);
+      line-height: 1.7;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a { color: #D97706; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Sticky nav */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(10,10,10,0.85);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      padding: 16px 0;
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(217,119,6,0.70);
+    }
+    .back-link {
+      font-size: 13px;
+      color: rgba(245,240,235,0.60);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .back-link:hover { color: #F5F0EB; text-decoration: none; }
+
+    /* Layout */
+    .layout {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 56px;
+    }
+
+    /* TOC (desktop sidebar) */
+    .toc-desktop {
+      position: sticky;
+      top: 88px;
+      align-self: start;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+    }
+    .toc-desktop h2 {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(217,119,6,0.70);
+      margin-bottom: 16px;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li { margin-bottom: 8px; }
+    .toc-list a {
+      font-size: 13px;
+      color: rgba(245,240,235,0.55);
+      line-height: 1.5;
+      display: block;
+      padding: 4px 0;
+      border-left: 2px solid transparent;
+      padding-left: 10px;
+      margin-left: -10px;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .toc-list a:hover {
+      color: #F5F0EB;
+      border-left-color: #D97706;
+      text-decoration: none;
+    }
+
+    /* TOC (mobile details) */
+    .toc-mobile { display: none; }
+    .toc-mobile summary {
+      cursor: pointer;
+      padding: 14px 18px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 600;
+      color: rgba(245,240,235,0.75);
+      list-style: none;
+    }
+    .toc-mobile summary::-webkit-details-marker { display: none; }
+    .toc-mobile summary::after {
+      content: "▾";
+      float: right;
+      color: #D97706;
+      transition: transform 0.2s;
+    }
+    .toc-mobile[open] summary::after { transform: rotate(180deg); }
+    .toc-mobile .toc-list { padding: 16px 18px 4px; }
+
+    /* Content */
+    article {
+      max-width: 760px;
+    }
+    article h1 {
+      font-size: clamp(30px, 5vw, 42px);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #F5F0EB;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+    .doc-meta {
+      font-size: 14px;
+      color: rgba(245,240,235,0.45);
+      margin-bottom: 40px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .doc-meta strong { color: rgba(245,240,235,0.70); font-weight: 600; }
+
+    article h2 {
+      font-size: 24px;
+      font-weight: 600;
+      color: #F5F0EB;
+      margin: 48px 0 16px;
+      line-height: 1.3;
+      scroll-margin-top: 80px;
+    }
+    article h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #F5F0EB;
+      margin: 28px 0 12px;
+      line-height: 1.4;
+    }
+    article p {
+      margin-bottom: 14px;
+      color: rgba(245,240,235,0.78);
+      font-size: 15px;
+    }
+    article ul, article ol {
+      margin: 12px 0 18px 22px;
+      color: rgba(245,240,235,0.78);
+      font-size: 15px;
+    }
+    article li { margin-bottom: 6px; }
+    article strong { color: #F5F0EB; font-weight: 600; }
+    article hr {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      margin: 48px 0;
+    }
+    article em {
+      color: rgba(245,240,235,0.60);
+      font-size: 13px;
+    }
+
+    /* Tables */
+    .table-wrap {
+      overflow-x: auto;
+      margin: 18px 0 24px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      background: rgba(255,255,255,0.02);
+    }
+    th, td {
+      text-align: left;
+      padding: 14px 16px;
+      vertical-align: top;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    th {
+      background: rgba(255,255,255,0.04);
+      color: #F5F0EB;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.2px;
+    }
+    td { color: rgba(245,240,235,0.72); }
+    tr:last-child td { border-bottom: none; }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 48px 0 32px;
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .footer-brand p {
+      font-size: 13px;
+      color: rgba(245,240,235,0.45);
+      margin-top: 6px;
+      max-width: 320px;
+    }
+    .footer-links {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      font-size: 13px;
+      color: rgba(245,240,235,0.60);
+    }
+    .footer-links a:hover { color: #F5F0EB; text-decoration: none; }
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 32px auto 0;
+      padding: 24px 24px 0;
+      border-top: 1px solid rgba(255,255,255,0.04);
+      font-size: 12px;
+      color: rgba(245,240,235,0.35);
+    }
+
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 32px 20px 64px;
+      }
+      .toc-desktop { display: none; }
+      .toc-mobile { display: block; }
+      article h2 { font-size: 22px; margin-top: 40px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="/" class="brand" style="text-decoration:none;">Ultra Soul</a>
+      <a href="/" class="back-link">← Powrót do strony głównej</a>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="toc-desktop" aria-label="Spis treści">
+      <h2>Spis treści</h2>
+      <ul class="toc-list">
+        <li><a href="#s1">1. Administrator danych</a></li>
+        <li><a href="#s2">2. Jakie dane zbieramy</a></li>
+        <li><a href="#s3">3. Cel i podstawa przetwarzania</a></li>
+        <li><a href="#s4">4. Przetwarzanie przez AI</a></li>
+        <li><a href="#s5">5. Odbiorcy danych</a></li>
+        <li><a href="#s5-1">5.1 Garmin Connect</a></li>
+        <li><a href="#s6">6. Transfer poza EOG</a></li>
+        <li><a href="#s7">7. Bezpieczeństwo danych</a></li>
+        <li><a href="#s8">8. Twoje prawa (RODO)</a></li>
+        <li><a href="#s9">9. Skarga do PUODO</a></li>
+        <li><a href="#s10">10. Pliki cookie</a></li>
+        <li><a href="#s11">11. Dane osób niepełnoletnich</a></li>
+        <li><a href="#s12">12. Zmiany w polityce</a></li>
+        <li><a href="#s13">13. Kontakt</a></li>
+      </ul>
+    </aside>
+
+    <article>
+      <details class="toc-mobile">
+        <summary>Spis treści</summary>
+        <ul class="toc-list">
+          <li><a href="#s1">1. Administrator danych</a></li>
+          <li><a href="#s2">2. Jakie dane zbieramy</a></li>
+          <li><a href="#s3">3. Cel i podstawa przetwarzania</a></li>
+          <li><a href="#s4">4. Przetwarzanie przez AI</a></li>
+          <li><a href="#s5">5. Odbiorcy danych</a></li>
+          <li><a href="#s5-1">5.1 Garmin Connect</a></li>
+          <li><a href="#s6">6. Transfer poza EOG</a></li>
+          <li><a href="#s7">7. Bezpieczeństwo danych</a></li>
+          <li><a href="#s8">8. Twoje prawa (RODO)</a></li>
+          <li><a href="#s9">9. Skarga do PUODO</a></li>
+          <li><a href="#s10">10. Pliki cookie</a></li>
+          <li><a href="#s11">11. Dane osób niepełnoletnich</a></li>
+          <li><a href="#s12">12. Zmiany w polityce</a></li>
+          <li><a href="#s13">13. Kontakt</a></li>
+        </ul>
+      </details>
+
+      <h1>Polityka Prywatności</h1>
+      <p class="doc-meta">
+        <strong>Wersja:</strong> 1.0 &nbsp;·&nbsp;
+        <strong>Data wejścia w życie:</strong> 21.04.2026 &nbsp;·&nbsp;
+        <strong>Adres publikacji:</strong> https://ultrasoul.pl/privacy
+      </p>
+
+      <h2 id="s1">1. Administrator danych</h2>
+      <p>Administratorem Twoich danych osobowych jest:</p>
+      <p>
+        <strong>Grzegorz Walencik</strong><br>
+        Adres do korespondencji: Tuwima 2/5, 82-300 Elbląg, Polska<br>
+        E-mail: <a href="mailto:kontakt@ultrasoul.pl">kontakt@ultrasoul.pl</a><br>
+        Strona: <a href="https://ultrasoul.pl">https://ultrasoul.pl</a>
+      </p>
+      <p>Projekt <strong>UltraSoulAI</strong> prowadzony jest w formie indywidualnej. Nie wyznaczyliśmy formalnego Inspektora Ochrony Danych (IOD), ponieważ skala przetwarzania nie wymaga tego zgodnie z art. 37 RODO. Wszelkie sprawy dotyczące ochrony danych kieruj bezpośrednio na <strong>kontakt@ultrasoul.pl</strong> — odpowiadamy w terminie do 30 dni.</p>
+
+      <hr>
+
+      <h2 id="s2">2. Jakie dane zbieramy</h2>
+
+      <h3>2.1 Dane podane bezpośrednio przez użytkownika</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Kategoria</th><th>Przykłady</th><th>Podstawa prawna</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Dane z formularzy analizy</td>
+              <td>Typ wyścigu, dystans, czas, objawy fizyczne, plan żywieniowy, waga, płeć, wiek</td>
+              <td>Art. 6 ust. 1 lit. b RODO (wykonanie umowy) + art. 9 ust. 2 lit. a RODO (wyraźna zgoda dla danych zdrowotnych)</td>
+            </tr>
+            <tr>
+              <td>Adres e-mail</td>
+              <td>Podany przy zapisie na follow-up lub newsletter</td>
+              <td>Art. 6 ust. 1 lit. a RODO (zgoda)</td>
+            </tr>
+            <tr>
+              <td>Kontekst żywieniowy</td>
+              <td>Co jadłeś przed treningiem, ilość żeli, elektrolity, suplementy</td>
+              <td>Art. 6 ust. 1 lit. b RODO (wykonanie umowy) + art. 9 ust. 2 lit. a RODO (wyraźna zgoda)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>2.2 Dane z integracji sportowych</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Źródło</th><th>Rodzaj danych</th><th>Czego NIE przechowujemy</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Strava</strong></td>
+              <td>Tętno (HR), tempo, wysokość, kadencja, czas trwania, dystans, temperatura (jeśli dostępna)</td>
+              <td>Współrzędne GPS nie są zapisywane — patrz uwaga niżej</td>
+            </tr>
+            <tr>
+              <td><strong>Garmin Connect</strong> <em>(integracja w fazie wdrożenia — oczekujemy zatwierdzenia przez Garmin Developer Program)</em></td>
+              <td>Po uruchomieniu: tętno, tempo, wysokość, kadencja, HRV (Heart Rate Variability), Body Battery, stress score, podsumowania dzienne</td>
+              <td>Współrzędne GPS nie będą zapisywane</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>Uwaga dotycząca GPS:</strong><br>
+      Współrzędne GPS są odbierane od Stravy (i w przyszłości Garmin Connect) w trakcie pobierania danych aktywności, ale <strong>nie są zapisywane w naszej bazie danych</strong>. Przechowujemy wyłącznie zagregowane strumienie numeryczne (tętno, tempo, wysokość, kadencja, dystans) w formacie JSONB. Nie przechowujemy również surowych plików FIT/GPX.</p>
+
+      <h3>2.3 Dane dotyczące zdrowia (art. 9 RODO)</h3>
+      <p>Niektóre dane, które przetwarzamy, mogą być uznane za "dane dotyczące zdrowia" w rozumieniu art. 9 ust. 1 RODO. Są to w szczególności:</p>
+      <ul>
+        <li>Tętno (HR), zmienność rytmu serca (HRV), Body Battery</li>
+        <li>Objawy fizyczne zgłaszane w formularzu analizy (np. mdłości, skurcze, wymioty, zawroty głowy)</li>
+        <li>Dane biometryczne: waga, płeć, wiek</li>
+      </ul>
+      <p>Dane te są przetwarzane <strong>wyłącznie na podstawie Twojej wyraźnej zgody</strong> (art. 9 ust. 2 lit. a RODO), udzielonej przez aktywne zaznaczenie odpowiedniego checkboxa przed rozpoczęciem analizy. Dane te są używane wyłącznie w celu generowania analizy żywieniowej przez naszą usługę i nie są udostępniane żadnym stronom trzecim poza podmiotami wymienionymi w sekcji 5.</p>
+
+      <h3>2.4 Dane zbierane automatycznie</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Dane</th><th>Cel</th><th>Podstawa prawna</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Adres IP</td><td>Ochrona przed nadużyciami (rate limiting)</td><td>Art. 6 ust. 1 lit. f (uzasadniony interes)</td></tr>
+            <tr><td>Typ urządzenia i przeglądarki</td><td>Zapewnienie poprawnego działania aplikacji</td><td>Art. 6 ust. 1 lit. f (uzasadniony interes)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Nie używamy plików cookie śledzących, pikseli reklamowych ani narzędzi analitycznych firm trzecich.</p>
+
+      <hr>
+
+      <h2 id="s3">3. Cel i podstawa przetwarzania danych</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Cel</th><th>Podstawa prawna</th><th>Okres przechowywania</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Analiza AI żywienia sportowego</td><td>Art. 6 ust. 1 lit. b (wykonanie umowy) + art. 9 ust. 2 lit. a (wyraźna zgoda dla danych zdrowotnych)</td><td>Do usunięcia konta lub cofnięcia zgody</td></tr>
+            <tr><td>Personalizacja rekomendacji suplementów</td><td>Art. 6 ust. 1 lit. b (wykonanie umowy)</td><td>Do usunięcia konta</td></tr>
+            <tr><td>Wysyłka e-maili follow-up po analizie</td><td>Art. 6 ust. 1 lit. a (zgoda)</td><td>Do wypisania się (link w każdym mailu)</td></tr>
+            <tr><td>Integracja Strava / Garmin Connect</td><td>Art. 6 ust. 1 lit. b (wykonanie umowy)</td><td>Do odłączenia integracji</td></tr>
+            <tr><td>Ochrona przed nadużyciami (rate limiting)</td><td>Art. 6 ust. 1 lit. f (uzasadniony interes)</td><td>30 dni</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <hr>
+
+      <h2 id="s4">4. Przetwarzanie przez AI (sztuczną inteligencję)</h2>
+      <p>Dane z formularzy i integracji sportowych są przetwarzane przez model AI Claude (dostawca: <strong>Anthropic, PBC</strong>) w celu wygenerowania analizy żywieniowej.</p>
+      <p><strong>Jak to działa:</strong></p>
+      <ul>
+        <li>Twoje dane są przesyłane do API Anthropic jako kontekst zapytania dla modelu AI</li>
+        <li>Model generuje analizę, która jest zwracana do aplikacji i zapisywana w bazie danych UltraSoulAI</li>
+        <li>Używamy komercyjnego Claude API — zgodnie z polityką Anthropic obowiązującą od 14 września 2025 r., <strong>dane z API są przechowywane przez Anthropic maksymalnie 7 dni</strong>, a następnie automatycznie usuwane</li>
+        <li><strong>Dane przesyłane do Claude API nie są używane do trenowania modeli AI</strong> — jest to odrębny reżim od konsumenckich produktów Anthropic (Claude.ai Free/Pro/Max), które mają inną politykę</li>
+      </ul>
+      <p><strong>Podstawa prawna:</strong> Art. 6 ust. 1 lit. b RODO (wykonanie umowy — analiza jest istotą usługi) + art. 9 ust. 2 lit. a RODO (wyraźna zgoda dla danych zdrowotnych).</p>
+
+      <hr>
+
+      <h2 id="s5">5. Odbiorcy danych (podmioty przetwarzające)</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Odbiorca</th><th>Rola</th><th>Lokalizacja</th><th>Gwarancje prawne</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Anthropic, PBC</strong></td><td>Przetwarzanie AI (Claude API)</td><td>USA</td><td>Commercial API Terms + SCC. Retencja 7 dni, brak użycia do trenowania modeli. <a href="https://www.anthropic.com/legal/privacy">Polityka Anthropic</a></td></tr>
+            <tr><td><strong>Supabase, Inc.</strong></td><td>Hosting bazy danych (PostgreSQL)</td><td>Frankfurt, Niemcy (eu-central-1)</td><td>RODO-compliant, dane przechowywane w UE</td></tr>
+            <tr><td><strong>Vercel, Inc.</strong></td><td>Hosting aplikacji webowej</td><td>Global CDN, dane przetwarzane w UE</td><td>SOC 2 Type II, DPA + SCC</td></tr>
+            <tr><td><strong>Railway Corp.</strong></td><td>Hosting backendu API</td><td>USA / UE</td><td>Standard Contractual Clauses</td></tr>
+            <tr><td><strong>Resend, Inc.</strong></td><td>Wysyłka e-maili transakcyjnych</td><td>USA</td><td><strong>EU-US Data Privacy Framework (DPF)</strong> + UK Extension to EU-US DPF + SCC. <a href="https://resend.com/legal/dpa">DPA Resend</a></td></tr>
+            <tr><td><strong>Strava, Inc.</strong></td><td>Dostawca danych sportowych</td><td>USA</td><td>Autoryzacja OAuth2, dane pobierane na żądanie użytkownika</td></tr>
+            <tr><td><strong>Garmin Ltd. / Garmin International, Inc.</strong></td><td>Dostawca danych sportowych (Garmin Connect)</td><td>USA / Szwajcaria / globalnie</td><td>Autoryzacja OAuth2 zgodnie z Garmin Connect Developer Program. Polityka prywatności Garmin Connect: <a href="https://www.garmin.com/privacy/connect">garmin.com/privacy/connect</a></td></tr>
+            <tr><td><strong>Google Ireland Ltd.</strong></td><td>Obsługa poczty firmowej (Google Workspace dla domeny ultrasoul.pl)</td><td>UE</td><td>RODO-compliant, dane w UE</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>Nie udostępniamy danych:</strong> agencjom reklamowym, brokerom danych, platformom social media ani żadnym innym podmiotom trzecim w celach komercyjnych.</p>
+
+      <hr>
+
+      <h2 id="s5-1">5.1 Twoje dane a Garmin Connect</h2>
+      <p>Jeśli łączysz swoje konto Garmin Connect z UltraSoulAI (po uruchomieniu integracji), pamiętaj:</p>
+      <ul>
+        <li>Autoryzacja przez OAuth2 oznacza przekazanie wybranych danych z Twojego konta Garmin Connect do UltraSoulAI</li>
+        <li><strong>Po przekazaniu danych, ich przetwarzanie podlega wyłącznie niniejszej Polityce Prywatności UltraSoulAI — nie polityce Garmin</strong></li>
+        <li><strong>Garmin nie ponosi odpowiedzialności za przetwarzanie danych przez UltraSoulAI po ich przekazaniu</strong></li>
+        <li>W każdej chwili możesz odłączyć integrację w ustawieniach konta w aplikacji UltraSoulAI lub pisząc na <a href="mailto:kontakt@ultrasoul.pl">kontakt@ultrasoul.pl</a></li>
+        <li>Odłączenie integracji skutkuje natychmiastowym usunięciem tokenów autoryzacyjnych i zsynchronizowanych danych z Garmin Connect</li>
+        <li>Polityka prywatności Garmin Connect: <a href="https://www.garmin.com/privacy/connect">garmin.com/privacy/connect</a></li>
+      </ul>
+
+      <hr>
+
+      <h2 id="s6">6. Transfer danych poza Europejski Obszar Gospodarczy (EOG)</h2>
+      <p>Niektóre dane mogą być transferowane do USA (Anthropic, Resend, Railway, Vercel w niektórych konfiguracjach CDN) na podstawie:</p>
+      <ul>
+        <li><strong>Decyzji adekwatności Komisji Europejskiej</strong> w ramach EU-US Data Privacy Framework (dotyczy dostawców certyfikowanych, m.in. Resend)</li>
+        <li><strong>Standardowych Klauzul Umownych (SCC)</strong> zgodnych z decyzją wykonawczą Komisji Europejskiej 2021/914</li>
+        <li><strong>Dodatkowych środków technicznych:</strong> szyfrowanie AES-256 w spoczynku (tokeny OAuth) i TLS 1.3 w transmisji</li>
+      </ul>
+
+      <hr>
+
+      <h2 id="s7">7. Bezpieczeństwo danych</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Środek</th><th>Opis</th></tr></thead>
+          <tbody>
+            <tr><td>Szyfrowanie tokenów</td><td>Tokeny OAuth (Strava, Garmin Connect) szyfrowane AES-256 przed zapisem do bazy danych</td></tr>
+            <tr><td>Szyfrowanie transmisji</td><td>Wszystkie połączenia przez HTTPS / TLS 1.3</td></tr>
+            <tr><td>Autoryzacja użytkownika</td><td>JWT Bearer tokens z podpisem HS256</td></tr>
+            <tr><td>Rate limiting</td><td>Limity na liczbę zapytań na minutę (globalnie oraz na endpointach AI)</td></tr>
+            <tr><td>Izolacja danych użytkownika</td><td>Każdy użytkownik ma dostęp wyłącznie do swoich danych (wymuszane na poziomie API przez JWT user_id)</td></tr>
+            <tr><td>Brak przechowywania GPS</td><td>Współrzędne geograficzne nie są zapisywane w bazie danych</td></tr>
+            <tr><td>Brak przechowywania surowych plików</td><td>Pliki FIT/GPX są parsowane w pamięci RAM i usuwane po przetworzeniu</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <hr>
+
+      <h2 id="s8">8. Twoje prawa (art. 15-22 RODO)</h2>
+      <p>Przysługuje Ci prawo do:</p>
+      <ol>
+        <li><strong>Dostępu</strong> do swoich danych (art. 15) — możesz zażądać kopii wszystkich danych, które o Tobie przechowujemy</li>
+        <li><strong>Sprostowania</strong> danych (art. 16) — jeśli Twoje dane są nieprawidłowe lub niekompletne</li>
+        <li><strong>Usunięcia</strong> danych (art. 17, "prawo do bycia zapomnianym") — możesz zażądać usunięcia wszystkich swoich danych</li>
+        <li><strong>Ograniczenia przetwarzania</strong> (art. 18)</li>
+        <li><strong>Przenoszenia</strong> danych (art. 20) — otrzymanie danych w formacie maszynowym (JSON)</li>
+        <li><strong>Sprzeciwu</strong> wobec przetwarzania (art. 21)</li>
+        <li><strong>Cofnięcia zgody</strong> w dowolnym momencie (art. 7 ust. 3) — bez wpływu na zgodność z prawem przetwarzania, którego dokonano na podstawie zgody przed jej cofnięciem</li>
+      </ol>
+      <h3>Jak skorzystać z praw</h3>
+      <ul>
+        <li><strong>E-mail:</strong> <a href="mailto:kontakt@ultrasoul.pl">kontakt@ultrasoul.pl</a></li>
+        <li><strong>W aplikacji:</strong> Odłączenie integracji Strava/Garmin Connect natychmiast usuwa tokeny autoryzacyjne oraz zsynchronizowane dane</li>
+        <li><strong>Wypisanie z e-maili:</strong> Link "Wypisz się" w stopce każdego maila newslettera</li>
+      </ul>
+      <p>Odpowiadamy na żądania w ciągu <strong>30 dni</strong> od otrzymania (zgodnie z art. 12 ust. 3 RODO).</p>
+
+      <hr>
+
+      <h2 id="s9">9. Prawo do wniesienia skargi</h2>
+      <p>Jeśli uważasz, że przetwarzamy Twoje dane niezgodnie z prawem, masz prawo złożyć skargę do organu nadzorczego:</p>
+      <p>
+        <strong>Prezes Urzędu Ochrony Danych Osobowych (PUODO)</strong><br>
+        ul. Stawki 2, 00-193 Warszawa<br>
+        <a href="https://uodo.gov.pl">https://uodo.gov.pl</a>
+      </p>
+
+      <hr>
+
+      <h2 id="s10">10. Pliki cookie</h2>
+      <p>Aplikacja mobilna UltraSoulAI <strong>nie używa plików cookie</strong>.</p>
+      <p>Wersja webowa (<a href="https://ultrasoul.pl">https://ultrasoul.pl</a>) używa wyłącznie plików cookie niezbędnych do działania serwisu:</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Cookie</th><th>Typ</th><th>Cel</th><th>Czas życia</th></tr></thead>
+          <tbody>
+            <tr><td>Sesyjne</td><td>Niezbędne</td><td>Utrzymanie sesji użytkownika</td><td>Do zamknięcia przeglądarki</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>Nie używamy:</strong> cookie analitycznych, reklamowych, śledzących, pikseli remarketingowych ani narzędzi firm trzecich (Google Analytics, Meta Pixel itp.).</p>
+
+      <hr>
+
+      <h2 id="s11">11. Dane osób niepełnoletnich</h2>
+      <p>UltraSoulAI jest usługą kierowaną do <strong>osób pełnoletnich (18+)</strong>. Powód: analiza żywieniowa może sugerować strategie suplementacji, kaloryczność i intensywność wysiłku, które wymagają dojrzałej oceny zdrowotnej i pełnej zdolności do czynności prawnych.</p>
+      <p>Nie zbieramy świadomie danych osób poniżej 18 roku życia. Jeśli dowiesz się, że osoba niepełnoletnia podała nam swoje dane, prosimy o kontakt na <a href="mailto:kontakt@ultrasoul.pl">kontakt@ultrasoul.pl</a> — niezwłocznie je usuniemy.</p>
+
+      <hr>
+
+      <h2 id="s12">12. Zmiany w polityce prywatności</h2>
+      <p>O wszelkich istotnych zmianach w niniejszej polityce poinformujemy:</p>
+      <ul>
+        <li>Komunikatem w aplikacji</li>
+        <li>E-mailem (jeśli podałeś adres e-mail)</li>
+      </ul>
+      <p>Zmiana treści polityki nie zmienia jej adresu URL (https://ultrasoul.pl/privacy) — w razie technicznej potrzeby zmiany adresu zastosujemy przekierowanie 301 z aktualnego adresu.</p>
+      <p>Przechowujemy poprzednie wersje polityki i udostępniamy je na żądanie (<a href="mailto:kontakt@ultrasoul.pl">kontakt@ultrasoul.pl</a>).</p>
+      <p>Dalsze korzystanie z aplikacji po opublikowaniu istotnych zmian oznacza ich akceptację. W przypadku zmian dotyczących przetwarzania danych na podstawie zgody, poprosimy Cię o ponowne wyrażenie zgody.</p>
+
+      <hr>
+
+      <h2 id="s13">13. Kontakt</h2>
+      <p>Wszelkie pytania dotyczące prywatności, żądania realizacji praw oraz zgłoszenia naruszeń kieruj na:</p>
+      <p>
+        <strong>E-mail:</strong> <a href="mailto:kontakt@ultrasoul.pl">kontakt@ultrasoul.pl</a><br>
+        <strong>Strona:</strong> <a href="https://ultrasoul.pl">https://ultrasoul.pl</a>
+      </p>
+
+      <hr>
+
+      <p><em>Niniejsza polityka obowiązuje od dnia 21.04.2026 i jest dostępna pod stabilnym adresem https://ultrasoul.pl/privacy.</em></p>
+    </article>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand">Ultra Soul</span>
+        <p>AI analiza żywienia sportowego dla ultra-biegaczy i triathlonistów.</p>
+      </div>
+      <nav class="footer-links" aria-label="Stopka">
+        <a href="/">Strona główna</a>
+        <a href="/terms">Regulamin</a>
+        <a href="mailto:kontakt@ultrasoul.pl">kontakt@ultrasoul.pl</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 UltraSoulAI. Wszystkie prawa zastrzeżone.
+    </div>
+  </footer>
+</body>
+</html>
